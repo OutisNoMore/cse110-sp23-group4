@@ -2,6 +2,8 @@ describe('Basic user flow for Website', () => {
   // First, visit the landing page
   beforeAll(async () => {
     const browser = await puppeteer.launch(
+      headless: false,
+      slowMo: 25,
       env: {
         DISPLAY: ":10.0"
       }

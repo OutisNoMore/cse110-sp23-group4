@@ -2,7 +2,7 @@ const ci = Boolean(process.env.CI || false);
 
 const baseOptions = {
   server: {
-  command: 'npm run start',
+  command: 'python3 -m http.server',
   port: 8000
   }
 }

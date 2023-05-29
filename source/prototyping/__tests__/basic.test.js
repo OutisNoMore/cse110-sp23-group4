@@ -1,7 +1,12 @@
 describe('Basic user flow for Website', () => {
   // First, visit the landing page
   beforeAll(async () => {
-    await page.goto('http://localhost:8000/landing-prototype.html');
+    const browser = puppeteer.launch(
+      env: {
+        DISPLAY: ":10.0"
+      }
+    );
+    await browser.goto('http://localhost:8000/landing-prototype.html');
   });
 
   // Check that button leads to next page

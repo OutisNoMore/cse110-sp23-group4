@@ -10,7 +10,7 @@ const baseOptions = {
 const ciPipelineOptions = {
   launch: {
     executablePath: '/usr/bin/google-chrome-stable',
-    headless: false,
+    headless: true,
     slowMo: 25,
     args: [
       '--ignore-certificate-errors',

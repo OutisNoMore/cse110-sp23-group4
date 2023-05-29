@@ -19,10 +19,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
+        working-directory: source/prototype
         with:
           node-version: ${{ matrix.node-version }}
-          root: source/prototyping
       - run: npm ci
+        working-directory: source/prototype
       - run: npm run build --if-present
+        working-directory: source/prototype
       - run: npm test
+        working-directory: source/prototype
 

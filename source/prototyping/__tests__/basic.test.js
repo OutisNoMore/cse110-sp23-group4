@@ -5,7 +5,7 @@ describe('Basic user flow for Website', () => {
       headless: false,
       slowMo: 25,
       env: {
-        DISPLAY: ":10.0"
+        DISPLAY: false
       }
     );
     await browser.goto('http://localhost:8000/landing-prototype.html');
